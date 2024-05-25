@@ -6,7 +6,7 @@ info:
   contact:
     name: Contact our support
     email: contact@example.com
-    url: http://example.com/contact
+    url: http://springframework.guru
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -20,11 +20,11 @@ info:
     # Introduction
 
     guesswork in calling the service.
-#tags:
+tags:
 #  - name: Echo
 #    description: "Example echo operations."
-#  - name: User
-#    description: "Example actions on user accounts."
+  - name: User
+    description: "Example actions on user accounts."
 #  - name: Admin
 #    description: "Example operations reserved for administrators."
 #  - name: Info
