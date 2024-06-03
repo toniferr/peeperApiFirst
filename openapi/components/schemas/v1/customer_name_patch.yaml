@@ -19,7 +19,7 @@ properties:
     description: Last Name
     minLength: 2
     maxLength: 100
-    example: Thompson
+    example: Doe
     nullable: true
   suffix:
     type: string  
