@@ -1,7 +1,5 @@
 type: object
 properties: 
-  id: 
-    $ref: ../common/uuid_id.yaml
   description:
     type: string
     description: The description of the product 
@@ -11,22 +9,19 @@ properties:
     $ref: dimensions.yaml
   categories:
     type: array
+    description: The category codes for the product
     items: 
-      $ref: category.yaml 
+      type: string
   images:
     type: array
     items: 
-      $ref: image.yaml
+      $ref: product_image_update.yaml
   price:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
   cost:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
-  dateCreated:
-    $ref: ../common/iso_timestamp.yaml
-  dateUpdated:
-    $ref: ../common/iso_timestamp.yaml 
 required:
   - description
   - price

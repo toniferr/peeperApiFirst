@@ -5,9 +5,9 @@ properties:
     name:  
       $ref: name.yaml
     shipToAddress:
-      $ref: address.yaml  
+      $ref: customer_address_patch.yaml  
     billToAddress:
-      $ref: address.yaml
+      $ref: customer_address_patch.yaml
     email:
       type: string
       maxLength: 255
@@ -24,12 +24,4 @@ properties:
       type: array
       nullable: true
       items: 
-        $ref: payment_method.yaml      
-    dateCreated:
-      $ref: ../common/iso_timestamp.yaml
-    dateUpdated:
-      $ref: ../common/iso_timestamp.yaml      
-required: 
-  - name
-  - shipToAddress
-  - billToAddress        
+        $ref: customer_payment_method_patch.yaml         

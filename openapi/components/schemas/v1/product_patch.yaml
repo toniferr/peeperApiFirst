@@ -1,32 +1,29 @@
 type: object
 properties: 
-  id: 
-    $ref: ../common/uuid_id.yaml
   description:
     type: string
     description: The description of the product 
     minLength: 3
     maxLength: 255
+    nullable: true
   dimensions:
-    $ref: dimensions.yaml
+    $ref: product_dimensions_patch.yaml
   categories:
     type: array
+    description: The category codes for the product
     items: 
-      $ref: category.yaml 
+      type: string
+    nullable: true  
   images:
     type: array
+    nullable: true
     items: 
-      $ref: image.yaml
+      $ref: product_image_patch.yaml
   price:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+    nullable: true
   cost:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
-  dateCreated:
-    $ref: ../common/iso_timestamp.yaml
-  dateUpdated:
-    $ref: ../common/iso_timestamp.yaml 
-required:
-  - description
-  - price
+    nullable: true

@@ -1,11 +1,11 @@
-openapi: 3.1.0
+openapi: 3.0.3
 info:
   version: 1.0.0
   title: API First with Spring Boot
   termsOfService: https://example.com/terms/
   contact:
-    name: Contact our support
-    email: contact@example.com
+    email: email@email.com
+    url: https://toniferr.github.io/
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -17,7 +17,7 @@ info:
 tags:
   - name: Customer
     description: Customer operations
-  - name: Products
+  - name: Product
     description: Product operations   
   - name: Order
     description: Operations about orders.
@@ -27,7 +27,7 @@ servers:
       tenant:
         default: www
         description: Your tenant id
-  - url: https://springframework.guru/api/v1
+  - url: https://host/api/v1
 paths:
   /v1/customers:
     $ref: paths/v1/customers.yaml
@@ -40,7 +40,9 @@ paths:
   /v1/orders:
     $ref: paths/v1/orders.yaml
   /v1/orders/{orderId}:
-    $ref: paths/v1/orders_{orderId}.yaml    
+    $ref: paths/v1/orders_{orderId}.yaml
+  /v1/categories:
+    $ref: paths/v1/categories.yaml  
 security: 
   -  basic_auth: []  
 components:
